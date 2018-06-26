@@ -1,0 +1,87 @@
+05/16/2016   SHA   Add mk.sh
+		   File: mk.sh
+				   
+05/16/2016   SHA   Add LED PinMux setting.
+		   File: board/ti/am335x/mux.c
+
+05/16/2016   SHA   Add K4B4G1646D DDR3 SDRAM setting.
+		   File: arch/arm/include/asm/arch-am33xx/ddr_defs.h
+			 board/ti/am335x/board.c
+						 
+05/16/2016   SHA   Modify U-Boot ENV offset to 64K-align, Modify U-Boot ENV size
+		   File: include/configs/am335x_evm.h
+				   
+05/16/2016   SHA   Fix the ID information same as StarterKit
+		   File: board/ti/am335x/board.c
+				   
+05/16/2016   SHA   Enable clock source for MMC2 device.
+		   File: arch/arm/cpu/armv7/am33xx/board.c
+			 arch/arm/cpu/armv7/am33xx/clock_am33xx.c
+			 arch/arm/cpu/armv7/omap-common/boot-common.c
+			 arch/arm/include/asm/arch-am33xx/mmc_host_def.h
+			 board/ti/am335x/mux.c
+
+06/15/2016   SHA   Add internal SRAM sections with cache enabled to early MMU settings.
+                   File: arch/arm/lib/cache-cp15.c
+
+06/15/2016   SHA   Enable I2C1、SPI0 PINMUX.
+                   File: arch/arm/lib/cache-cp15.c
+
+06/15/2016   SHA   Enable dcache function.
+                   File: common/spl/spl.c
+
+01/09/2017   SHA   Enable clock source for I2C2 device, avoid data abort.
+		   File: arch/arm/cpu/armv7/am33xx/clock_am33xx.c
+
+01/09/2017   SHA   Boot from MMC0.
+		   File: arch/arm/cpu/armv7/omap-common/boot-common.c
+
+01/09/2017   SHA   Add Micron DDR3 SDRAM setting
+		   File: arch/arm/include/asm/arch-am33xx/ddr_defs.h
+
+01/09/2017   SHA   Modify DDR3 SDRAM timing setting(MICRCON).
+		   File: board/ti/am335x/board.c
+
+01/09/2017   SHA   Enable Pin Mux(mii1, rgmii2, mmc0, mmc1, i2c2 spi1).
+		   File: board/ti/am335x/board.c
+
+01/09/2017   SHA   Enable PCA953x function.
+		   File: common/spl/spl_fat.c
+			 include/configs/am335x_evm.h
+
+01/09/2017   SHA   Enable PCA953x address.
+		   File: include/configs/am335x_evm.h
+
+01/09/2017   SHA   Modified clock V_OSCK 24000000 -> 25000000.
+		   File: include/configs/am335x_evm.h
+
+01/09/2017   SHA   Enable MARVELL PHY driver.
+		   File: include/configs/am335x_evm.h
+
+01/10/2017   SHA   Modified phy id for MXcore-01.
+		   File: board/ti/am335x/board.c
+
+01/10/2017   SHA   Modified MAC1 = mii && MAC2 = RGMII.
+		   File: board/ti/am335x/board.c
+
+01/10/2017   SHA   Added MAC2.
+		   File: drivers/net/cpsw.c
+
+01/10/2017   SHA   Enable spi1 clock.
+		   File: arch/arm/cpu/armv7/am33xx/clock_am33xx.c
+
+01/10/2017   SHA   Enable dcan0 clock.
+		   File: arch/arm/cpu/armv7/am33xx/clock_am33xx.c
+
+01/10/2017   SHA   Enable dcan1 clock.
+		   File: arch/arm/cpu/armv7/am33xx/clock_am33xx.c
+
+01/13/2017   SHA   Enable two usb device.
+		   File: common/usb.c
+			 drivers/usb/musb-new/musb_uboot.c
+			 include/usb.h
+
+02/01/2017   SHA   Added external ethernet loop back test.
+		   File: include/configs/am335x_evm.h
+			 include/net.h
+			 net/net.c
